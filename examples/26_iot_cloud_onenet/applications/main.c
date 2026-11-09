@@ -779,6 +779,9 @@ static void onenet_data_status(void)
     onenet_data_t data;
 
     onenet_collect_data(&data);
+    rt_kprintf("Firmware=%s, MQTT=%s, upload_interval_ms=%d\n",
+               FW_VERSION, mqtt_client.isconnected ? "online" : "offline",
+               UPLOAD_INTERVAL_MS);
     rt_kprintf("Led=%d, Motor=%d, humi=%d.%d, lux=%d.%d, temp=%d.%d\n",
                data.led,
                data.motor,
