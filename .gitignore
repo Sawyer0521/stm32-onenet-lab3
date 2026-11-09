@@ -1,0 +1,21 @@
+# Build outputs and machine-local configuration
+**/build/
+**/DebugConfig/
+**/RTE/
+**/.vscode/
+**/.agents/
+**/__pycache__/
+*.pyc
+*.o
+*.obj
+*.axf
+*.bin
+*.hex
+*.elf
+*.map
+*.d
+*.dep
+*.log
+*.uvguix*
+*.uvoptx
+**/cloud_config.h
