@@ -22,6 +22,8 @@
 #include "paho_mqtt.h"
 #include "cloud_config.h"
 
+#define FW_VERSION "v1.1.0"
+
 #define DBG_TAG "main"
 #define DBG_LVL DBG_LOG
 #include <rtdbg.h>
@@ -740,6 +742,7 @@ static void wlan_ready_handler(int event, struct rt_wlan_buff *buff, void *param
 
 int main(void)
 {
+    rt_kprintf("[APP] Firmware version: %s\n", FW_VERSION);
     rt_pin_mode(LED_PIN, PIN_MODE_OUTPUT);
     rt_pin_mode(MOTOR_PIN_A, PIN_MODE_OUTPUT);
     rt_pin_mode(MOTOR_PIN_B, PIN_MODE_OUTPUT);
